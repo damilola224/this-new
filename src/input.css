@@ -1,0 +1,547 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+ strong{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+ }
+ .contact{
+    font-size: 40px;
+    margin-left: 100px;
+ }
+.spinner {
+    width: 44px;
+    height: 44px;
+    animation: spinner-y0fdc1 2s infinite ease;
+    transform-style: preserve-3d;
+}
+
+.spinner>div {
+    background-color: rgba(0, 77, 255, 0.2);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 2px solid #004dff;
+}
+
+.spinner div:nth-of-type(1) {
+    transform: translateZ(-22px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+    transform: translateZ(22px);
+}
+
+@keyframes spinner-y0fdc1 {
+    0% {
+        transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+
+    50% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+
+    100% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+}
+
+
+
+.cls-1 {
+    fill: #f15a24;
+    animation: cls1 4s ease infinite both;
+}
+
+@keyframes cls1 {
+    0% {
+        fill: #f15a24;
+    }
+
+    34% {
+        fill: #ed1c24;
+    }
+
+    66% {
+        fill: #f7931e;
+    }
+
+    100% {
+        fill: #f15a24;
+    }
+}
+
+.cls-1,
+.cls-2,
+.cls-3 {
+    stroke-width: 0px;
+}
+
+.cls-2 {
+    fill: #f7931e;
+    animation: cls2 4s ease infinite both;
+}
+
+@keyframes cls2 {
+    0% {
+        fill: #f7931e;
+    }
+
+    34% {
+        fill: #f15a24;
+    }
+
+    66% {
+        fill: #ed1c24;
+    }
+
+    100% {
+        fill: #f7931e;
+    }
+}
+
+.cls-3 {
+    fill: #ed1c24;
+    animation: cls3 4s ease infinite both;
+}
+
+@keyframes cls3 {
+    0% {
+        fill: #ed1c24;
+    }
+
+    34% {
+        fill: #f7931e;
+    }
+
+    66% {
+        fill: #f15a24;
+    }
+
+    100% {
+        fill: #ed1c24;
+    }
+}
+
+.cls-4 {
+    display: none;
+}
+
+#triangle {
+    height: 100px;
+    width: 100px;
+    padding-top: 10px;
+    margin-top: -10px;
+
+    animation: triangle 4s both infinite;
+}
+
+@keyframes triangle {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* From Uiverse.io by alexruix */
+.loader {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    position: relative;
+    margin-top: 30px;
+}
+
+.loader:before {
+    content: '';
+    width: 48px;
+    height: 5px;
+    background: #f0808050;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow324 0.5s linear infinite;
+}
+
+.loader:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #f08080;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    animation: jump7456 0.5s linear infinite;
+}
+
+@keyframes jump7456 {
+    15% {
+        border-bottom-right-radius: 3px;
+    }
+
+    25% {
+        transform: translateY(9px) rotate(22.5deg);
+    }
+
+    50% {
+        transform: translateY(18px) scale(1, .9) rotate(45deg);
+        border-bottom-right-radius: 40px;
+    }
+
+    75% {
+        transform: translateY(9px) rotate(67.5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(90deg);
+    }
+}
+
+@keyframes shadow324 {
+
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1);
+    }
+}
+
+
+/* From Uiverse.io by Nawsome */
+.loadingspinner {
+    --square: 26px;
+    --offset: 30px;
+    --duration: 2.4s;
+    --delay: 0.2s;
+    --timing-function: ease-in-out;
+    --in-duration: 0.4s;
+    --in-delay: 0.1s;
+    --in-timing-function: ease-out;
+    width: calc(3 * var(--offset) + var(--square));
+    height: calc(2 * var(--offset) + var(--square));
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.loadingspinner div {
+    display: inline-block;
+    background: darkorange;
+    /*background: var(--text-color);*/
+    /*box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);*/
+    border: none;
+    border-radius: 2px;
+    width: var(--square);
+    height: var(--square);
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    font-size: 6pt;
+    color: black;
+}
+
+.loadingspinner #square1 {
+    left: calc(0 * var(--offset));
+    top: calc(0 * var(--offset));
+    animation: square1 var(--duration) var(--delay) var(--timing-function) infinite,
+        squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loadingspinner #square2 {
+    left: calc(0 * var(--offset));
+    top: calc(1 * var(--offset));
+    animation: square2 var(--duration) var(--delay) var(--timing-function) infinite,
+        squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loadingspinner #square3 {
+    left: calc(1 * var(--offset));
+    top: calc(1 * var(--offset));
+    animation: square3 var(--duration) var(--delay) var(--timing-function) infinite,
+        squarefadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loadingspinner #square4 {
+    left: calc(2 * var(--offset));
+    top: calc(1 * var(--offset));
+    animation: square4 var(--duration) var(--delay) var(--timing-function) infinite,
+        squarefadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+.loadingspinner #square5 {
+    left: calc(3 * var(--offset));
+    top: calc(1 * var(--offset));
+    animation: square5 var(--duration) var(--delay) var(--timing-function) infinite,
+        squarefadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
+}
+
+@keyframes square1 {
+    0% {
+        left: calc(0 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    8.333% {
+        left: calc(0 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    100% {
+        left: calc(0 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+}
+
+@keyframes square2 {
+    0% {
+        left: calc(0 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    8.333% {
+        left: calc(0 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    16.67% {
+        left: calc(1 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    25.00% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    83.33% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    91.67% {
+        left: calc(1 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    100% {
+        left: calc(0 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+}
+
+@keyframes square3 {
+
+    0%,
+    100% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    16.67% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    25.00% {
+        left: calc(1 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    33.33% {
+        left: calc(2 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    41.67% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    66.67% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    75.00% {
+        left: calc(2 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    83.33% {
+        left: calc(1 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    91.67% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+}
+
+@keyframes square4 {
+    0% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    33.33% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    41.67% {
+        left: calc(2 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    50.00% {
+        left: calc(3 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    58.33% {
+        left: calc(3 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    100% {
+        left: calc(3 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+}
+
+@keyframes square5 {
+    0% {
+        left: calc(3 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    50.00% {
+        left: calc(3 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    58.33% {
+        left: calc(3 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    66.67% {
+        left: calc(2 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    75.00% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    100% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+}
+
+@keyframes squarefadein {
+    0% {
+        transform: scale(0.75);
+        opacity: 0.0;
+    }
+
+    100% {
+        transform: scale(1.0);
+        opacity: 1.0;
+    }
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-bg {
+    background: linear-gradient(270deg, #ff7e5f, #feb47b);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+
+    iframe{
+        width: 240px;
+        height: 240px;
+        margin-top: 30px;
+    }
+      
+    .my-form{
+        width: 240px;
+    }
+    .our-service{
+        font-size:15px
+    }
+    .our-service1{
+            font-size: 15px;
+            margin-top: -20px;
+        }
+    .our-service2{
+            font-size: 16px;
+            margin-top: -70px;
+        }
+    .contact {
+            font-size: 30px;
+            margin-left: 30px;
+                }
+    .skill{
+        font-size: 25px;
+    }
+    
+}
